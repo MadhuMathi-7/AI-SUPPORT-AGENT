@@ -1,0 +1,185 @@
+{
+  "num_evaluated": 200,
+  "mean_scores": {
+    "correctness": 4.08,
+    "groundedness": 4.54,
+    "helpfulness": 3.58,
+    "relevance": 3.67,
+    "tone": 3.95
+  },
+  "overall_average_quality_score_out_of_5": 3.96,
+  "unsupported_claims_count": 0,
+  "unsupported_claims_rate_pct": 0.0,
+  "sample_evaluations": [
+    {
+      "example_id": "GOLDEN_001",
+      "customer_message": "@AmazonHelp Item was already returned. I refused to accept damaged product. Pls read original tweet. Issue is that @115850 rejected my product review.",
+      "predicted_intent": "damaged_defective_item",
+      "decision": "AUTO_HANDLE",
+      "generated_reply": "We've responded to your concern via DM. Kindly refer.",
+      "judge_evaluation": {
+        "correctness": 4,
+        "groundedness": 5,
+        "helpfulness": 4,
+        "relevance": 3,
+        "tone": 3,
+        "unsupported_claims": 0,
+        "explanation": "Grounded response with 0 polite markers and 1 actionable guidance items.",
+        "judge_type": "heuristic_grounding_auditor"
+      }
+    },
+    {
+      "example_id": "GOLDEN_002",
+      "customer_message": "@AmazonHelp \"October 11, 2017 11:06 am Picked Up by Shipping Partner, USPS Awaiting Item, TRACY, CA 95304\" That's all they've got.",
+      "predicted_intent": "delivery_tracking_delay",
+      "decision": "ESCALATE_TO_HUMAN",
+      "generated_reply": "Thank you for letting us know. If you don't get the package within the next day or so, please let us know.",
+      "judge_evaluation": {
+        "correctness": 4,
+        "groundedness": 5,
+        "helpfulness": 3,
+        "relevance": 3,
+        "tone": 4,
+        "unsupported_claims": 0,
+        "explanation": "Grounded response with 1 polite markers and 0 actionable guidance items.",
+        "judge_type": "heuristic_grounding_auditor"
+      }
+    },
+    {
+      "example_id": "GOLDEN_003",
+      "customer_message": "@AmazonHelp It was not shipped until last night, my whole thing is that do not guarantee a delivery date if it won't happen, it was a preorder of a book but at this point I should have gone to a store to buy it instead of your website",
+      "predicted_intent": "delivery_tracking_delay",
+      "decision": "AUTO_HANDLE",
+      "generated_reply": "As you have mentioned that your order is out for delivery, I'm positive that your item will be delivered by end of the day. Appreciate your patience.",
+      "judge_evaluation": {
+        "correctness": 5,
+        "groundedness": 5,
+        "helpfulness": 3,
+        "relevance": 5,
+        "tone": 3,
+        "unsupported_claims": 0,
+        "explanation": "Grounded response with 0 polite markers and 0 actionable guidance items.",
+        "judge_type": "heuristic_grounding_auditor"
+      }
+    },
+    {
+      "example_id": "GOLDEN_004",
+      "customer_message": "@116935 I subscribe to Amazon music unlimited and is connected to my echo device. Currently unable to locate and play any music.",
+      "predicted_intent": "prime_subscription_services",
+      "decision": "ESCALATE_TO_HUMAN",
+      "generated_reply": "Great question! To start with, we suggest downloading the Amazon Alexa app: https://t.co/0qV7L27JA9. Once you have this set up on your phone, you can create multi-room groups to play music on multiple devices: https://t.co/kokBBIprTa",
+      "judge_evaluation": {
+        "correctness": 5,
+        "groundedness": 5,
+        "helpfulness": 3,
+        "relevance": 5,
+        "tone": 3,
+        "unsupported_claims": 0,
+        "explanation": "Grounded response with 0 polite markers and 0 actionable guidance items.",
+        "judge_type": "heuristic_grounding_auditor"
+      }
+    },
+    {
+      "example_id": "GOLDEN_005",
+      "customer_message": "@115821 germany blocked my account for CC check several months ago but continue sending me spam, sorry @115821, can't buy shit bc you blocked my account, 2 months after you did another check, I'm sure it has nothing to do with germens hating eastern europeans.",
+      "predicted_intent": "account_access_security",
+      "decision": "ESCALATE_TO_HUMAN",
+      "generated_reply": "I'm sorry for the account issues. Have you received an e-mail about this? Did you reach us here: https://t.co/LGsFoZKHYO?",
+      "judge_evaluation": {
+        "correctness": 4,
+        "groundedness": 4,
+        "helpfulness": 3,
+        "relevance": 5,
+        "tone": 4,
+        "unsupported_claims": 0,
+        "explanation": "Grounded response with 1 polite markers and 0 actionable guidance items.",
+        "judge_type": "heuristic_grounding_auditor"
+      }
+    },
+    {
+      "example_id": "GOLDEN_006",
+      "customer_message": "@115850 fake GST INVOICE is given by amazon",
+      "predicted_intent": "payment_billing_issue",
+      "decision": "AUTO_HANDLE",
+      "generated_reply": "We'd like to take a closer look into this. Please report this to our support team here: https://t.co/vlvfJr4nN9.",
+      "judge_evaluation": {
+        "correctness": 4,
+        "groundedness": 5,
+        "helpfulness": 4,
+        "relevance": 3,
+        "tone": 4,
+        "unsupported_claims": 0,
+        "explanation": "Grounded response with 1 polite markers and 1 actionable guidance items.",
+        "judge_type": "heuristic_grounding_auditor"
+      }
+    },
+    {
+      "example_id": "GOLDEN_007",
+      "customer_message": "@115850 Despite of giving details, no action from ur side. Trap customer by sending wrong product and then refuse to return is ur habit",
+      "predicted_intent": "refund_return_cancellation",
+      "decision": "AUTO_HANDLE",
+      "generated_reply": "That's quite a comment! Could you kindly elaborate on the issue further?",
+      "judge_evaluation": {
+        "correctness": 4,
+        "groundedness": 4,
+        "helpfulness": 3,
+        "relevance": 3,
+        "tone": 3,
+        "unsupported_claims": 0,
+        "explanation": "Grounded response with 0 polite markers and 0 actionable guidance items.",
+        "judge_type": "heuristic_grounding_auditor"
+      }
+    },
+    {
+      "example_id": "GOLDEN_008",
+      "customer_message": "Hey @AmazonHelp, I recently got my 2nd @117634 Voyage. Can I remove the \"swipe to unlock\" screen like I did my first one? I chatted with 2 CSRs already and they were of no help. Trying to find my old chat transcript about my 1st Kindle but I may have deleted it already.",
+      "predicted_intent": "prime_subscription_services",
+      "decision": "ESCALATE_TO_HUMAN",
+      "generated_reply": "I'd be glad to help with your Prime membership! You can manage or cancel auto-renewal under 'Manage Prime Membership' in your account settings.",
+      "judge_evaluation": {
+        "correctness": 4,
+        "groundedness": 4,
+        "helpfulness": 3,
+        "relevance": 5,
+        "tone": 5,
+        "unsupported_claims": 0,
+        "explanation": "Grounded response with 2 polite markers and 0 actionable guidance items.",
+        "judge_type": "heuristic_grounding_auditor"
+      }
+    },
+    {
+      "example_id": "GOLDEN_009",
+      "customer_message": "Since How I met Your Mother is now removed from Netflix, @115850 @AmazonHelp can you get it on Prime Videos, please?",
+      "predicted_intent": "general_inquiry_support",
+      "decision": "ESCALATE_TO_HUMAN",
+      "generated_reply": "We're here to help! Please send us a Direct Message with further details about your inquiry so our team can provide personalized assistance.",
+      "judge_evaluation": {
+        "correctness": 4,
+        "groundedness": 4,
+        "helpfulness": 5,
+        "relevance": 5,
+        "tone": 5,
+        "unsupported_claims": 0,
+        "explanation": "Grounded response with 3 polite markers and 2 actionable guidance items.",
+        "judge_type": "heuristic_grounding_auditor"
+      }
+    },
+    {
+      "example_id": "GOLDEN_010",
+      "customer_message": "@AmazonHelp I have already waited for a long time just to get that refund and now I will not wait. You just cancel the refund I dont need it now. Thanks for you help btw.",
+      "predicted_intent": "refund_return_cancellation",
+      "decision": "AUTO_HANDLE",
+      "generated_reply": "If the seller is not responding you can file an A-z Guarantee Claim.: https://t.co/4S5ALLg6t9",
+      "judge_evaluation": {
+        "correctness": 4,
+        "groundedness": 5,
+        "helpfulness": 3,
+        "relevance": 3,
+        "tone": 3,
+        "unsupported_claims": 0,
+        "explanation": "Grounded response with 0 polite markers and 0 actionable guidance items.",
+        "judge_type": "heuristic_grounding_auditor"
+      }
+    }
+  ]
+}

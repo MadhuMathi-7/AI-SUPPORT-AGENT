@@ -1,0 +1,24 @@
+{
+  "majority_baseline": {
+    "accuracy": 0.125,
+    "macro_f1": 0.0317,
+    "macro_precision": 0.0179,
+    "macro_recall": 0.1429,
+    "training_time_sec": 0.006
+  },
+  "tfidf_logistic_regression": {
+    "accuracy": 0.89,
+    "macro_f1": 0.8941,
+    "macro_precision": 0.9178,
+    "macro_recall": 0.8883,
+    "training_time_sec": 0.83
+  },
+  "semantic_classifier": {
+    "accuracy": 0.83,
+    "macro_f1": 0.8278,
+    "macro_precision": 0.8402,
+    "macro_recall": 0.8251,
+    "mean_confidence": 0.7441,
+    "training_time_sec": 208.755
+  }
+}

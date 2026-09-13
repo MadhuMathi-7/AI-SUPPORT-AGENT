@@ -1,0 +1,101 @@
+{
+  "file_path": "C:\\Users\\HP\\.gemini\\antigravity-ide\\scratch\\hiver-sde-ai-support-agent\\data\\raw\\twcs.csv",
+  "file_size_bytes": 516508641,
+  "file_size_mb": 492.58,
+  "total_rows": 2811774,
+  "columns": [
+    "tweet_id",
+    "author_id",
+    "inbound",
+    "created_at",
+    "text",
+    "response_tweet_id",
+    "in_response_to_tweet_id"
+  ],
+  "column_dtypes": {
+    "tweet_id": "int64",
+    "author_id": "str",
+    "inbound": "bool",
+    "created_at": "str",
+    "text": "str",
+    "response_tweet_id": "str",
+    "in_response_to_tweet_id": "float64"
+  },
+  "null_counts": {
+    "tweet_id": 0,
+    "author_id": 0,
+    "inbound": 0,
+    "created_at": 0,
+    "text": 0,
+    "response_tweet_id": 1040629,
+    "in_response_to_tweet_id": 794335
+  },
+  "null_percentages": {
+    "tweet_id": 0.0,
+    "author_id": 0.0,
+    "inbound": 0.0,
+    "created_at": 0.0,
+    "text": 0.0,
+    "response_tweet_id": 37.01,
+    "in_response_to_tweet_id": 28.25
+  },
+  "inbound_distribution": {
+    "inbound_customer_messages": 1537843,
+    "outbound_brand_responses": 1273931,
+    "other_or_malformed": 0,
+    "inbound_percentage": 54.69,
+    "outbound_percentage": 45.31
+  },
+  "sample_unique_authors_count": 200676,
+  "date_range": {
+    "earliest_created_at": "Fri Apr 01 17:37:48 +0000 2016",
+    "latest_created_at": "Wed Sep 28 18:06:15 +0000 2016"
+  },
+  "sample_records": [
+    {
+      "tweet_id": 1,
+      "author_id": "sprintcare",
+      "inbound": false,
+      "created_at": "Tue Oct 31 22:10:47 +0000 2017",
+      "text": "@115712 I understand. I would like to assist you. We would need to get you into a private secured link to further assist.",
+      "response_tweet_id": 2.0,
+      "in_response_to_tweet_id": 3
+    },
+    {
+      "tweet_id": 2,
+      "author_id": "115712",
+      "inbound": true,
+      "created_at": "Tue Oct 31 22:11:45 +0000 2017",
+      "text": "@sprintcare and how do you propose we do that",
+      "response_tweet_id": NaN,
+      "in_response_to_tweet_id": 1
+    },
+    {
+      "tweet_id": 3,
+      "author_id": "115712",
+      "inbound": true,
+      "created_at": "Tue Oct 31 22:08:27 +0000 2017",
+      "text": "@sprintcare I have sent several private messages and no one is responding as usual",
+      "response_tweet_id": 1.0,
+      "in_response_to_tweet_id": 4
+    },
+    {
+      "tweet_id": 4,
+      "author_id": "sprintcare",
+      "inbound": false,
+      "created_at": "Tue Oct 31 21:54:49 +0000 2017",
+      "text": "@115712 Please send us a Private Message so that we can further assist you. Just click \u2018Message\u2019 at the top of your profile.",
+      "response_tweet_id": 3.0,
+      "in_response_to_tweet_id": 5
+    },
+    {
+      "tweet_id": 5,
+      "author_id": "115712",
+      "inbound": true,
+      "created_at": "Tue Oct 31 21:49:35 +0000 2017",
+      "text": "@sprintcare I did.",
+      "response_tweet_id": 4.0,
+      "in_response_to_tweet_id": 6
+    }
+  ]
+}

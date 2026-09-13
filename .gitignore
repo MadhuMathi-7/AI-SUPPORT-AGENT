@@ -1,0 +1,27 @@
+# Python environment
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+
+# Secrets and environment variables
+.env
+*.pem
+*.key
+
+# Data files (keep raw large datasets uncommitted to git, track schemas/samples)
+data/raw/*.csv
+data/raw/*.zip
+data/processed/*.parquet
+data/processed/*.csv
+!data/golden/*.csv
+!data/golden/*.json
+
+# Cache and temporary files
+.cache/
+.pytest_cache/
+*.log
+scratch/

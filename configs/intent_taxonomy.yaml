@@ -1,0 +1,132 @@
+# Intent Taxonomy Configuration for AmazonHelp Customer Support System
+# Derived empirically from Amazon customer support interactions in twcs.csv
+
+version: "1.0.0"
+brand: "AmazonHelp"
+total_intents: 7
+
+intents:
+  - id: "delivery_tracking_delay"
+    name: "Delivery Tracking & Delays"
+    description: "Inquiries regarding package shipping status, delivery delays, tracking links, courier updates, or packages marked delivered but missing."
+    keywords:
+      - "delivery"
+      - "tracking"
+      - "package"
+      - "arrive"
+      - "late"
+      - "where is my"
+      - "courier"
+      - "shipping"
+      - "dispatch"
+      - "delivered but not received"
+    examples:
+      - "@AmazonHelp 3 different people have given 3 different answers and I still don't have my order. Says delivered Saturday, was not."
+      - "@AmazonHelp Where is my package? It was supposed to arrive by 8 PM today but tracking hasn't updated."
+      - "@AmazonHelp My order shows as delivered today but no package was left at my door or mailbox."
+
+  - id: "refund_return_cancellation"
+    name: "Refunds, Returns & Cancellations"
+    description: "Requests to return an item, check refund processing status, cancel an order, or process an exchange."
+    keywords:
+      - "refund"
+      - "return"
+      - "cancel"
+      - "money back"
+      - "exchange"
+      - "drop off"
+      - "return label"
+      - "replacement"
+    examples:
+      - "@AmazonHelp Already started the return. UPS gets it from my doorstep tomorrow. When will my refund post?"
+      - "@AmazonHelp Delivery I paid for didn't arrive. Please cancel the order and refund the delivery charge."
+      - "@AmazonHelp How do I return an item that I purchased last week and get a replacement?"
+
+  - id: "damaged_defective_item"
+    name: "Damaged, Defective or Wrong Item"
+    description: "Reports of receiving broken products, defective electronics, wrong items, missing components, or crushed shipping boxes."
+    keywords:
+      - "damaged"
+      - "broken"
+      - "defective"
+      - "wrong item"
+      - "faulty"
+      - "crushed"
+      - "scratched"
+      - "poor quality"
+    examples:
+      - "@AmazonHelp It would be nice if the item I waited months for wasn't damaged inside an undented box."
+      - "@AmazonHelp I received the wrong color and size for my shoe order. How can I get the correct one sent?"
+      - "@AmazonHelp The electronic device I ordered arrived broken and will not power on."
+
+  - id: "account_access_security"
+    name: "Account Access & Security"
+    description: "Issues related to signing in, password resets, locked accounts, 2FA/OTP verification, or unauthorized account modifications."
+    keywords:
+      - "account"
+      - "login"
+      - "password"
+      - "sign in"
+      - "locked"
+      - "otp"
+      - "verification"
+      - "hacked"
+      - "email change"
+    examples:
+      - "@AmazonHelp My account has been locked and I cannot sign in to view my active orders."
+      - "@AmazonHelp I am not receiving the two-factor authentication OTP code on my registered mobile number."
+      - "@AmazonHelp Need help resetting my account password as the reset link sent to my email has expired."
+
+  - id: "payment_billing_issue"
+    name: "Payment & Billing Inquiries"
+    description: "Unexpected charges, duplicate card debits, failed payment methods, invoice inquiries, or promo code application errors."
+    keywords:
+      - "charged"
+      - "payment"
+      - "card"
+      - "bank"
+      - "duplicate charge"
+      - "invoice"
+      - "debit"
+      - "credit"
+      - "gift card"
+      - "promo code"
+    examples:
+      - "@AmazonHelp I was charged twice on my credit card for order 111-5014070. Please reverse the duplicate debit."
+      - "@AmazonHelp My gift card balance was not applied to my checkout order total."
+      - "@AmazonHelp Payment failed on checkout but the amount was deducted from my bank account."
+
+  - id: "prime_subscription_services"
+    name: "Prime & Digital Subscriptions"
+    description: "Inquiries regarding Amazon Prime benefits, renewal charges, Prime Video / Music streaming errors, Kindle subscriptions, or membership cancellation."
+    keywords:
+      - "prime"
+      - "membership"
+      - "subscription"
+      - "prime video"
+      - "music"
+      - "kindle"
+      - "renewal"
+      - "annual fee"
+    examples:
+      - "@AmazonHelp I was charged for Prime membership renewal without my consent. How do I cancel and get a refund?"
+      - "@AmazonHelp Prime Video keeps throwing error code 5004 on my smart TV when trying to stream."
+      - "@AmazonHelp Why is my order not qualifying for free One-Day Prime shipping when I have an active membership?"
+
+  - id: "general_inquiry_support"
+    name: "General Policy & Agent Escalation"
+    description: "General questions regarding store policies, international shipping, website feedback, or explicit requests to speak with a human support agent."
+    keywords:
+      - "customer service"
+      - "help"
+      - "speak to human"
+      - "agent"
+      - "representative"
+      - "contact number"
+      - "international shipping"
+      - "policy"
+      - "feedback"
+    examples:
+      - "@AmazonHelp Can you please connect me with a live representative or have an agent call me?"
+      - "@AmazonHelp Do you offer international delivery to Australia for consumer electronics?"
+      - "@AmazonHelp I need general help regarding your holiday return policy timeline."

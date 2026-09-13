@@ -1,0 +1,191 @@
+{
+  "total_queries_evaluated": 200,
+  "auto_handle_count": 107,
+  "auto_handle_rate_pct": 53.5,
+  "escalate_to_human_count": 93,
+  "escalate_rate_pct": 46.5,
+  "escalation_trigger_breakdown": {
+    "sensitive_or_legal_keywords": {
+      "count": 1,
+      "pct_of_total": 0.5
+    },
+    "security_account_policy": {
+      "count": 22,
+      "pct_of_total": 11.0
+    },
+    "low_intent_confidence": {
+      "count": 63,
+      "pct_of_total": 31.5
+    },
+    "low_retrieval_evidence": {
+      "count": 0,
+      "pct_of_total": 0.0
+    }
+  },
+  "difficulty_stratification": {
+    "easy": {
+      "total": 30,
+      "auto_handle_pct": 63.33,
+      "escalate_pct": 36.67
+    },
+    "medium": {
+      "total": 122,
+      "auto_handle_pct": 51.64,
+      "escalate_pct": 48.36
+    },
+    "hard": {
+      "total": 48,
+      "auto_handle_pct": 52.08,
+      "escalate_pct": 47.92
+    }
+  },
+  "intent_breakdown": {
+    "damaged_defective_item": {
+      "total": 20,
+      "auto_handle": 14,
+      "escalate": 6
+    },
+    "delivery_tracking_delay": {
+      "total": 39,
+      "auto_handle": 26,
+      "escalate": 13
+    },
+    "prime_subscription_services": {
+      "total": 22,
+      "auto_handle": 13,
+      "escalate": 9
+    },
+    "account_access_security": {
+      "total": 23,
+      "auto_handle": 0,
+      "escalate": 23
+    },
+    "payment_billing_issue": {
+      "total": 22,
+      "auto_handle": 14,
+      "escalate": 8
+    },
+    "refund_return_cancellation": {
+      "total": 34,
+      "auto_handle": 26,
+      "escalate": 8
+    },
+    "general_inquiry_support": {
+      "total": 40,
+      "auto_handle": 14,
+      "escalate": 26
+    }
+  },
+  "sample_escalation_records": [
+    {
+      "example_id": "GOLDEN_001",
+      "customer_message": "@AmazonHelp Item was already returned. I refused to accept damaged product. Pls read original tweet. Issue is that @115850 rejected my product review.",
+      "gold_intent": "damaged_defective_item",
+      "predicted_intent": "damaged_defective_item",
+      "intent_confidence": 0.823,
+      "top_retrieval_similarity": 0.8237,
+      "difficulty": "medium",
+      "decision": "AUTO_HANDLE",
+      "reason": "High intent confidence (0.82) and strong historical resolution evidence (similarity 0.82) support safe automated reply."
+    },
+    {
+      "example_id": "GOLDEN_002",
+      "customer_message": "@AmazonHelp \"October 11, 2017 11:06 am Picked Up by Shipping Partner, USPS Awaiting Item, TRACY, CA 95304\" That's all they've got.",
+      "gold_intent": "delivery_tracking_delay",
+      "predicted_intent": "delivery_tracking_delay",
+      "intent_confidence": 0.3764,
+      "top_retrieval_similarity": 0.7529,
+      "difficulty": "medium",
+      "decision": "ESCALATE_TO_HUMAN",
+      "reason": "Low intent classification confidence (0.38 < threshold 0.65). Issue is ambiguous or out-of-domain."
+    },
+    {
+      "example_id": "GOLDEN_003",
+      "customer_message": "@AmazonHelp It was not shipped until last night, my whole thing is that do not guarantee a delivery date if it won't happen, it was a preorder of a book but at this point I should have gone to a store to buy it instead of your website",
+      "gold_intent": "delivery_tracking_delay",
+      "predicted_intent": "delivery_tracking_delay",
+      "intent_confidence": 0.8516,
+      "top_retrieval_similarity": 0.7572,
+      "difficulty": "medium",
+      "decision": "AUTO_HANDLE",
+      "reason": "High intent confidence (0.85) and strong historical resolution evidence (similarity 0.76) support safe automated reply."
+    },
+    {
+      "example_id": "GOLDEN_004",
+      "customer_message": "@116935 I subscribe to Amazon music unlimited and is connected to my echo device. Currently unable to locate and play any music.",
+      "gold_intent": "prime_subscription_services",
+      "predicted_intent": "prime_subscription_services",
+      "intent_confidence": 0.5746,
+      "top_retrieval_similarity": 0.8117,
+      "difficulty": "hard",
+      "decision": "ESCALATE_TO_HUMAN",
+      "reason": "Low intent classification confidence (0.57 < threshold 0.65). Issue is ambiguous or out-of-domain."
+    },
+    {
+      "example_id": "GOLDEN_005",
+      "customer_message": "@115821 germany blocked my account for CC check several months ago but continue sending me spam, sorry @115821, can't buy shit bc you blocked my account, 2 months after you did another check, I'm sure it has nothing to do with germens hating eastern europeans.",
+      "gold_intent": "account_access_security",
+      "predicted_intent": "account_access_security",
+      "intent_confidence": 0.9199,
+      "top_retrieval_similarity": 0.6329,
+      "difficulty": "medium",
+      "decision": "ESCALATE_TO_HUMAN",
+      "reason": "Account access and security inquiries require human identity verification and security protocol adherence."
+    },
+    {
+      "example_id": "GOLDEN_006",
+      "customer_message": "@115850 fake GST INVOICE is given by amazon",
+      "gold_intent": "payment_billing_issue",
+      "predicted_intent": "payment_billing_issue",
+      "intent_confidence": 0.9817,
+      "top_retrieval_similarity": 0.8309,
+      "difficulty": "hard",
+      "decision": "AUTO_HANDLE",
+      "reason": "High intent confidence (0.98) and strong historical resolution evidence (similarity 0.83) support safe automated reply."
+    },
+    {
+      "example_id": "GOLDEN_007",
+      "customer_message": "@115850 Despite of giving details, no action from ur side. Trap customer by sending wrong product and then refuse to return is ur habit",
+      "gold_intent": "refund_return_cancellation",
+      "predicted_intent": "refund_return_cancellation",
+      "intent_confidence": 0.7441,
+      "top_retrieval_similarity": 0.7078,
+      "difficulty": "hard",
+      "decision": "AUTO_HANDLE",
+      "reason": "High intent confidence (0.74) and strong historical resolution evidence (similarity 0.71) support safe automated reply."
+    },
+    {
+      "example_id": "GOLDEN_008",
+      "customer_message": "Hey @AmazonHelp, I recently got my 2nd @117634 Voyage. Can I remove the \"swipe to unlock\" screen like I did my first one? I chatted with 2 CSRs already and they were of no help. Trying to find my old chat transcript about my 1st Kindle but I may have deleted it already.",
+      "gold_intent": "prime_subscription_services",
+      "predicted_intent": "prime_subscription_services",
+      "intent_confidence": 0.6352,
+      "top_retrieval_similarity": 0.0,
+      "difficulty": "medium",
+      "decision": "ESCALATE_TO_HUMAN",
+      "reason": "Low intent classification confidence (0.64 < threshold 0.65). Issue is ambiguous or out-of-domain."
+    },
+    {
+      "example_id": "GOLDEN_009",
+      "customer_message": "Since How I met Your Mother is now removed from Netflix, @115850 @AmazonHelp can you get it on Prime Videos, please?",
+      "gold_intent": "prime_subscription_services",
+      "predicted_intent": "general_inquiry_support",
+      "intent_confidence": 0.4461,
+      "top_retrieval_similarity": 0.0,
+      "difficulty": "medium",
+      "decision": "ESCALATE_TO_HUMAN",
+      "reason": "Low intent classification confidence (0.45 < threshold 0.65). Issue is ambiguous or out-of-domain."
+    },
+    {
+      "example_id": "GOLDEN_010",
+      "customer_message": "@AmazonHelp I have already waited for a long time just to get that refund and now I will not wait. You just cancel the refund I dont need it now. Thanks for you help btw.",
+      "gold_intent": "refund_return_cancellation",
+      "predicted_intent": "refund_return_cancellation",
+      "intent_confidence": 0.9671,
+      "top_retrieval_similarity": 0.8664,
+      "difficulty": "medium",
+      "decision": "AUTO_HANDLE",
+      "reason": "High intent confidence (0.97) and strong historical resolution evidence (similarity 0.87) support safe automated reply."
+    }
+  ]
+}

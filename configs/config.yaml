@@ -1,0 +1,73 @@
+# Master Configuration File for Hiver AI Support Agent System
+
+project_name: "hiver-sde-ai-support-agent"
+version: "1.0.0"
+random_seed: 42
+
+# Selected Primary Brand
+brand:
+  name: "AmazonHelp"
+  domain: "E-Commerce Customer Support"
+
+# Paths
+paths:
+  raw_data: "data/raw/twcs.csv"
+  processed_pairs: "data/processed/customer_brand_pairs.parquet"
+  processed_threads: "data/processed/conversation_threads.parquet"
+  train_split: "data/splits/train_pairs.parquet"
+  val_split: "data/splits/val_pairs.parquet"
+  test_split: "data/splits/test_pairs.parquet"
+  golden_set: "data/golden/golden_set.csv"
+  intent_taxonomy: "configs/intent_taxonomy.yaml"
+  models_dir: "models/"
+  reports_dir: "reports/"
+
+# Dataset Splitting
+split:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  split_by: "conversation_id"  # Strict conversation-level isolation
+
+# Intent Classification Models
+classification:
+  default_model: "tfidf_logistic_regression"
+  majority_baseline:
+    strategy: "most_frequent"
+  tfidf_logistic_regression:
+    max_features: 5000
+    ngram_range: [1, 2]
+    c_regularization: 1.0
+  semantic_classifier:
+    embedding_model: "all-MiniLM-L6-v2"
+    device: "cpu"
+    batch_size: 64
+
+# Historical Retrieval Engine
+retrieval:
+  top_k: 3
+  similarity_metric: "cosine"
+  leakage_prevention: "conversation_id_filter"
+  max_context_turns: 5
+
+# Escalation Router Thresholds
+escalation:
+  intent_confidence_threshold: 0.65
+  retrieval_similarity_threshold: 0.60
+  sensitive_keywords:
+    - "lawyer"
+    - "attorney"
+    - "sue"
+    - "legal action"
+    - "police"
+    - "fraud"
+    - "stolen"
+    - "human agent"
+    - "supervisor"
+    - "speak to a person"
+
+# Reply Generation
+generation:
+  model: "gpt-3.5-turbo"  # Or local fallback template
+  temperature: 0.2
+  max_tokens: 150
